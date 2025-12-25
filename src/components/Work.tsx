@@ -97,7 +97,7 @@ export function Work() {
           B.S. Computer Science, Minor in Creative Writing
         </p>
         <p className="text-muted text-xs mt-4">
-          <span className="text-foreground">Nikhil&apos;s Picks 2.0</span>
+          <span className="text-foreground">Classes I enjoyed</span>
           <br />
           Parallel Computing, Advanced Poetry Workshop 
           <br />
@@ -108,7 +108,7 @@ export function Work() {
       </Reveal>
 
       <Reveal className="text-center">
-        <p className="text-muted text-xs uppercase tracking-wide mb-8">Nikhil&apos;s Picks 3.0</p>
+        <p className="text-muted text-xs uppercase tracking-wide mb-8">Nikhil&apos;s Picks 2.0</p>
         
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-24">
           <div className="flex flex-col items-center space-y-1">
