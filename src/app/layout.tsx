@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Software Engineer | Product · AI · Infrastructure",
-  description: "Software engineer specializing in product engineering, AI systems, and distributed infrastructure. Building scalable systems that deliver measurable impact.",
+  title: "Nikhil Paruchuri",
+  description: "Software engineer specializing in product engineering, AI systems, and distributed infrastructure.",
   openGraph: {
-    title: "Software Engineer | Product · AI · Infrastructure",
-    description: "Software engineer specializing in product engineering, AI systems, and distributed infrastructure.",
+    title: "Nikhil Paruchuri",
+    description: "Software engineer",
     type: "website",
   },
 };
