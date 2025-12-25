@@ -23,7 +23,7 @@ export function Hero() {
       </StaggerItem>
       <StaggerItem>
         <p className="text-muted">
-          Software engineer. I love anything product and infrastructure.
+          Software engineer. Interested in anything product and infra.
         </p>
       </StaggerItem>
     </Stagger>
