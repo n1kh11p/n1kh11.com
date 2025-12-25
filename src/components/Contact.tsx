@@ -13,6 +13,9 @@ export function Contact() {
         <AnimatedLink href="https://www.linkedin.com/in/nikhil-paruchuri/" external className="text-muted hover:text-foreground-strong">
           linkedin
         </AnimatedLink>
+        <AnimatedLink href="/spotify" className="text-muted hover:text-foreground-strong">
+          spotify
+        </AnimatedLink>
       </div>
     </Reveal>
   );
