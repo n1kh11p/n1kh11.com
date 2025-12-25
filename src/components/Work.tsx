@@ -23,7 +23,7 @@ const experience = [
     role: "Software Development Engineer Intern",
     company: "Chipotle",
     note: "Product engineering on Chipotle.com, full-stack+infra",
-    logo: "/Chipotle.png",
+    logo: "/chipotle.png",
   },
 ];
 
