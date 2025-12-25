@@ -12,7 +12,7 @@ export function Hero() {
           alt="Nikhil Paruchuri"
           width={120}
           height={120}
-          className="rounded-full"
+          className="rounded-full object-cover aspect-square"
           priority
         />
       </StaggerItem>
