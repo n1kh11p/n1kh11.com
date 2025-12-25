@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Reveal } from "./motion";
+import { Reveal, AnimatedLink } from "./motion";
 
 const experience = [
   {
@@ -105,6 +105,26 @@ export function Work() {
           <br />
           Foundations of Programming Languages, Computer and Network Security
         </p>
+      </Reveal>
+
+      <Reveal className="text-center">
+        <p className="text-muted text-xs uppercase tracking-wide mb-8">Nikhil&apos;s Picks 3.0</p>
+        
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-24">
+          <div className="flex flex-col items-center space-y-1">
+            <AnimatedLink href="/spotify" className="text-muted hover:text-foreground-strong">
+              Spotify
+            </AnimatedLink>
+            <p className="text-muted text-xs opacity-50">My recent listening history</p>
+          </div>
+          
+          <div className="flex flex-col items-center space-y-1">
+            <AnimatedLink href="/goodreads" className="text-muted hover:text-foreground-strong">
+              Good Reads
+            </AnimatedLink>
+            <p className="text-muted text-xs opacity-50">Literature that intrigues me</p>
+          </div>
+        </div>
       </Reveal>
 
       <Reveal>

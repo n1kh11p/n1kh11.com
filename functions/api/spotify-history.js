@@ -31,7 +31,7 @@ export async function onRequest(context) {
     const { access_token } = tokenData;
 
     // Fetch recently played tracks
-    const RECENTLY_PLAYED_ENDPOINT = `https://api.spotify.com/v1/me/player/recently-played?limit=10`;
+    const RECENTLY_PLAYED_ENDPOINT = `https://api.spotify.com/v1/me/player/recently-played?limit=20`;
     const recentlyPlayedRes = await fetch(RECENTLY_PLAYED_ENDPOINT, {
       headers: {
         Authorization: `Bearer ${access_token}`,
