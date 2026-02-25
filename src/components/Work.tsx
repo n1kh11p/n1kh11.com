@@ -5,6 +5,20 @@ import { Reveal, AnimatedLink } from "./motion";
 
 const experience = [
   {
+    period: "May 2026 - Aug 2026",
+    role: "Software Engineer Intern",
+    company: "LinkedIn",
+    note: "Incoming summer 2026",
+    logo: "/LinkedIn.png",
+  },
+  {
+    period: "Aug 2026 - Nov 2026",
+    role: "Software Engineer Intern",
+    company: "Microsoft",
+    note: "Incoming fall 2026",
+    logo: "/Microsoft.png",
+  },
+  {
     period: "June 2025 - Aug 2025",
     role: "Software Engineer Intern",
     company: "Capital One",
