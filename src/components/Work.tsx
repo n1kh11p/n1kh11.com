@@ -84,7 +84,7 @@ export function Work() {
                   alt={exp.company}
                   width={56}
                   height={56}
-                  className={`mb-3 object-contain ${exp.company === "Capital One" ? "rounded-full" : ""}`}
+                  className={`mb-3 object-contain ${exp.company === "Capital One" ? "rounded-full" : ""} ${exp.company === "LinkedIn" ? "scale-160" : ""} ${exp.company === "Microsoft" ? "scale-105" : ""}`}
                 />
               )}
               <span className="text-foreground">{exp.role}</span>
