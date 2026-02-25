@@ -75,24 +75,35 @@ export function Work() {
 
       <Reveal>
         <p className="text-muted text-xs uppercase tracking-wide mb-6 text-center">Experience</p>
-        <div className="space-y-6">
-          {experience.map((exp) => (
-            <div key={exp.company + exp.period} className="flex flex-col items-center text-center">
-              {exp.logo && (
-                <Image
-                  src={exp.logo}
-                  alt={exp.company}
-                  width={56}
-                  height={56}
-                  className={`mb-3 object-contain ${exp.company === "Capital One" ? "rounded-full" : ""} ${exp.company === "LinkedIn" ? "scale-160" : ""} ${exp.company === "Microsoft" ? "scale-105" : ""}`}
-                />
-              )}
-              <span className="text-foreground">{exp.role}</span>
-              <span className="text-muted">{exp.company}</span>
-              <p className="text-muted text-sm mt-1">{exp.note}</p>
-              <p className="text-muted text-xs">{exp.period}</p>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
+          {experience.map((exp, i) => {
+            const isLastAndOdd = i === experience.length - 1 && experience.length % 2 === 1;
+            const card = (
+              <div className={`flex flex-col items-center text-center ${isLastAndOdd ? "w-full md:max-w-[calc((100%-2.5rem)/2)]" : ""}`}>
+                {exp.logo && (
+                  <Image
+                    src={exp.logo}
+                    alt={exp.company}
+                    width={56}
+                    height={56}
+                    className={`mb-3 object-contain ${exp.company === "Capital One" ? "rounded-full" : ""} ${exp.company === "LinkedIn" ? "scale-160" : ""} ${exp.company === "Microsoft" ? "scale-105" : ""}`}
+                  />
+                )}
+                <span className="text-foreground">{exp.role}</span>
+                <span className="text-muted">{exp.company}</span>
+                <p className="text-muted text-sm mt-1">{exp.note}</p>
+                <p className="text-muted text-xs">{exp.period}</p>
+              </div>
+            );
+            return (
+              <div
+                key={exp.company + exp.period}
+                className={isLastAndOdd ? "md:col-span-2 flex justify-center" : ""}
+              >
+                {card}
+              </div>
+            );
+          })}
         </div>
       </Reveal>
 
