@@ -34,7 +34,7 @@ const experience = [
   },
   {
     period: "June 2024 - Aug 2024",
-    role: "Software Development Engineer Intern",
+    role: "Software Engineer Intern",
     company: "Chipotle",
     note: "Product engineering on Chipotle.com, full-stack+infra",
     logo: "/chipotle.png",
