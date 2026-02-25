@@ -9,14 +9,14 @@ const experience = [
     role: "Software Engineer Intern",
     company: "LinkedIn",
     note: "Incoming summer 2026",
-    logo: "/LinkedIn.png",
+    logo: "/linkedin.png",
   },
   {
     period: "Aug 2026 - Nov 2026",
     role: "Software Engineer Intern",
     company: "Microsoft",
     note: "Incoming fall 2026",
-    logo: "/Microsoft.png",
+    logo: "/microsoft.png",
   },
   {
     period: "June 2025 - Aug 2025",
