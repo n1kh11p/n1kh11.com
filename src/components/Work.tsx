@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Reveal, AnimatedLink } from "./motion";
+import { Reveal, AnimatedLink, Stagger, StaggerItem } from "./motion";
 
 const experience = [
   {
@@ -75,11 +75,11 @@ export function Work() {
 
       <Reveal>
         <p className="text-muted text-xs uppercase tracking-wide mb-6 text-center">Experience</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
+        <Stagger className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
           {experience.map((exp, i) => {
             const isLastAndOdd = i === experience.length - 1 && experience.length % 2 === 1;
             const card = (
-              <div className={`flex flex-col items-center text-center ${isLastAndOdd ? "w-full md:max-w-[calc((100%-2.5rem)/2)]" : ""}`}>
+              <StaggerItem className={`flex flex-col items-center text-center ${isLastAndOdd ? "w-full md:max-w-[calc((100%-2.5rem)/2)]" : ""}`}>
                 {exp.logo && (
                   <Image
                     src={exp.logo}
@@ -93,7 +93,7 @@ export function Work() {
                 <span className="text-muted">{exp.company}</span>
                 <p className="text-muted text-sm mt-1">{exp.note}</p>
                 <p className="text-muted text-xs">{exp.period}</p>
-              </div>
+              </StaggerItem>
             );
             return (
               <div
@@ -104,7 +104,7 @@ export function Work() {
               </div>
             );
           })}
-        </div>
+        </Stagger>
       </Reveal>
 
       <Reveal className="text-center">
@@ -154,14 +154,14 @@ export function Work() {
 
       <Reveal>
         <p className="text-muted text-xs uppercase tracking-wide mb-4 text-center">Projects</p>
-        <div className="space-y-2 text-sm text-center">
+        <Stagger className="space-y-2 text-sm text-center">
           {projects.map((project) => (
-            <div key={project.name}>
+            <StaggerItem key={project.name}>
               <span className="text-foreground">{project.name}</span>
               <span className="text-muted"> — {project.description}</span>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </Reveal>
     </section>
   );

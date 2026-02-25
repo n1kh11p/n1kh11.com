@@ -6,6 +6,7 @@
   --foreground-strong: #d4d4d4;
   --muted: #525252;
   --border: #1a1a1a;
+  font-size: 18px;
 }
 
 @theme inline {

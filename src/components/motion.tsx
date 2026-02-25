@@ -13,7 +13,7 @@ const staggerContainer = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.08,
+      staggerChildren: 0.12,
       delayChildren: 0.1,
     },
   },
@@ -61,10 +61,14 @@ interface StaggerProps {
 }
 
 export function Stagger({ children, className }: StaggerProps) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(ref, { once: false, margin: "-50px" });
+
   return (
     <motion.div
+      ref={ref}
       initial="hidden"
-      animate="visible"
+      animate={isInView ? "visible" : "hidden"}
       variants={staggerContainer}
       className={className}
     >
@@ -88,7 +92,7 @@ interface RevealProps {
 
 export function Reveal({ children, className }: RevealProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const isInView = useInView(ref, { once: false, margin: "-50px" });
 
   return (
     <motion.div
