@@ -198,8 +198,8 @@ export function Work() {
         <Reveal>
           <p className="eyebrow mb-5">Beyond code</p>
           <p className="max-w-prose text-muted-strong">
-            A few things I return to — languages, teams, writers, artists. Not a personality
-            quiz, just honest taste.
+            A few of my favs — languages, teams, athletes, writers, artists. Not a personality
+            quiz, just ball knowledge.
           </p>
         </Reveal>
 
