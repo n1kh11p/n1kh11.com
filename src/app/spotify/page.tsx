@@ -77,9 +77,9 @@ export default function SpotifyPage() {
                   href={track.songUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 group p-2 -mx-2 rounded-lg hover:bg-white/5 transition-colors"
+                  className="flex items-center gap-5 group p-3 -mx-3 rounded-xl hover:bg-white/5 transition-colors"
                 >
-                  <div className="relative w-12 h-12 flex-shrink-0 bg-muted/20 rounded-md overflow-hidden">
+                  <div className="relative w-16 h-16 flex-shrink-0 bg-muted/20 rounded-lg overflow-hidden">
                     {track.albumImageUrl && (
                       <Image
                         src={track.albumImageUrl}
@@ -90,14 +90,14 @@ export default function SpotifyPage() {
                     )}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-foreground text-sm font-medium truncate group-hover:text-foreground-strong transition-colors">
+                    <p className="text-foreground text-base font-medium truncate group-hover:text-foreground-strong transition-colors">
                       {track.title}
                     </p>
-                    <p className="text-muted text-xs truncate">
+                    <p className="text-muted text-sm truncate">
                       {track.artist}
                     </p>
                   </div>
-                  <div className="text-muted/50 text-xs whitespace-nowrap">
+                  <div className="text-muted/50 text-sm whitespace-nowrap">
                     {formatTimeAgo(track.playedAt)}
                   </div>
                 </a>

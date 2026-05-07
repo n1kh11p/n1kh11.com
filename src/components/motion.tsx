@@ -88,15 +88,17 @@ export function StaggerItem({ children, className }: StaggerProps) {
 interface RevealProps {
   children: ReactNode;
   className?: string;
+  id?: string;
 }
 
-export function Reveal({ children, className }: RevealProps) {
+export function Reveal({ children, className, id }: RevealProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "-50px" });
 
   return (
     <motion.div
       ref={ref}
+      id={id}
       initial={{ opacity: 0, y: 10 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
       transition={{

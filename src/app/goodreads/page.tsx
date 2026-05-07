@@ -1,30 +1,33 @@
 "use client";
 
-import { Stagger, StaggerItem, AnimatedLink } from "@/components/motion";
+import { useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function GoodreadsPage() {
-  return (
-    <div className="min-h-screen bg-background">
-      <main className="max-w-xl mx-auto px-6 py-24 md:py-32">
-        <Stagger className="mb-12 text-center">
-          <StaggerItem>
-            <AnimatedLink href="/" className="text-muted text-xs uppercase tracking-wide mb-8 hover:text-foreground transition-colors">
-              ← Back
-            </AnimatedLink>
-          </StaggerItem>
-          
-          <StaggerItem>
-            <h1 className="text-foreground text-xl mb-2 mt-8">Good Reads</h1>
-            <p className="text-muted text-sm">Books and articles that have shaped my thinking.</p>
-          </StaggerItem>
-        </Stagger>
+  const router = useRouter();
 
-        <Stagger className="space-y-6 text-center">
-          <StaggerItem>
-            <p className="text-muted text-sm">Coming soon...</p>
-          </StaggerItem>
-        </Stagger>
-      </main>
+  useEffect(() => {
+    router.replace("/writing");
+  }, [router]);
+
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-background px-6 text-center">
+      <div className="space-y-3">
+        <p className="font-mono text-[11px] uppercase tracking-wider text-muted">
+          Redirecting
+        </p>
+        <p className="font-serif text-2xl italic text-foreground-strong">
+          This room moved.
+        </p>
+        <p className="text-sm text-muted">
+          Taking you to{" "}
+          <Link href="/writing" className="text-foreground hover:text-foreground-strong">
+            /writing
+          </Link>
+          …
+        </p>
+      </div>
     </div>
   );
 }
