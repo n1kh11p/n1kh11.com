@@ -199,7 +199,7 @@ export function Work() {
         <Reveal>
           <p className="eyebrow mb-5">Beyond code</p>
           <p className="max-w-prose text-muted-strong">
-            Some of my favs — languages, teams, athletes, writers, artists. Not a personality quiz, just ball knowledge.
+            Some of my favs — languages, teams, athletes, writers, artists.
           </p>
         </Reveal>
 
