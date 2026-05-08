@@ -121,6 +121,7 @@ const picks = [
   { label: "LA Lakers", kind: "life" },
   { label: "Lebron James", kind: "life" },
   { label: "Drake", kind: "music" },
+  { label: "Frank Ocean", kind: "music" },
   { label: "Gunna", kind: "music" },
   { label: "JSN", kind: "life" },
   { label: "Robert Frost", kind: "verse" },
@@ -270,8 +271,8 @@ export function Work() {
                   <div className="min-w-0 pb-2">
                     <div className="flex flex-wrap items-baseline gap-x-2">
                       <h3 className="text-foreground-strong">
-                        {exp.role}{" "}
-                        <span className="text-muted-strong">· {exp.company}</span>
+                        {exp.company}{" "}
+                        <span className="text-muted-strong">· {exp.role}</span>
                       </h3>
                       {exp.upcoming && (
                         <span className="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-1.5 py-px font-mono text-[10px] text-emerald-300">
