@@ -227,7 +227,7 @@ export function Work() {
               href="/spotify"
               eyebrow="Listening"
               title="Recent plays"
-              subtitle="Live from Spotify. Updated constantly, judge accordingly."
+              subtitle="What I've been listening to."
             />
             <AnimatedCard
               href="/writing"
